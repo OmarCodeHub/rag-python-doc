@@ -14,12 +14,18 @@ end-to-end on free-tier hosting.
 
 Try a question like:
 
-> *How do I run multiple coroutines concurrently?*
+> *What is the difference between Optional and Union in typing?*
 
 You'll get a streamed answer with clickable citations back to
 docs.python.org. The admin dashboard at `/admin` is password-gated and
 shows every question, the chunks retrieved, and any inputs flagged by the
 moderation + injection layers.
+
+> The suggested query above is one the retrieval eval covers and passes. Two
+> queries in the golden set do *not* pass, and both are documented with their
+> diagnosis in [EVAL_RESULTS.md](EVAL_RESULTS.md). Finding out which questions
+> a retriever gets wrong is the point of this project, so they are published
+> rather than hidden.
 
 > Hosted on Render's free tier — first request after a cold start may take
 > ~30 seconds while the service wakes up.
